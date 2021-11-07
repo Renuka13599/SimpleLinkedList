@@ -50,11 +50,6 @@ public class LinkedList {
         temp.next = newNode;
     }
 
-    public void deleteFirstNode(){
-        MyNode temp = head;
-        head = temp.next;
-    }
-
     public void pop() {
         MyNode temp = head;
         head = temp.next;
