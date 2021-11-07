@@ -25,7 +25,7 @@ public class LinkedList {
     }
 
 
-        public void append(int data) {
+     public void append(int data) {
         MyNode newNode = new MyNode(data);
         if (head == null){
             head = newNode;
