@@ -1,7 +1,7 @@
 package com.bridgelabz;
 /*Author:Renu
 *Date:7/11/21
-*purpose:Simple linked list
+*purpose:Insert an element in Linkedlist
  */
 
 public class LinkedList {
@@ -16,9 +16,16 @@ public class LinkedList {
             tail.next = newNode;                 //when list is not empty adds new node to the next node
             tail = newNode;
         }
+
+    }
+    public void insertAt(int data) {
+        MyNode newNode = new MyNode(data);
+        newNode.next = head;
+        head = newNode;
     }
 
-    public void append(int data) {
+
+        public void append(int data) {
         MyNode newNode = new MyNode(data);
         if (head == null){
             head = newNode;
@@ -26,34 +33,39 @@ public class LinkedList {
         }
         else {
             MyNode temp = head;
-            while (temp.next != null){
+            while (temp.next != null) {
                 temp = temp.next;
             }
             temp.next = newNode;
             temp = newNode;
         }
 
+
     }
 
-    /**
-     * MyNode is to create the node with data
-     */
+    public void insertAt(int data, int index) {
+        MyNode newNode = new MyNode(data);
+        MyNode temp = head;
+        for (int i=0;i < index - 1;i++){             //traversing to that Index
+            temp = temp.next;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
+
+
+}
+
     class MyNode{
         int data;                            //declaring variables
         MyNode next;
-        /**
-         * Parameterised constructor to create a new node
-         * Defined data and next
-         */
         MyNode(int data){
             this.data = data;
             next = null;
         }
-    }
 
-    /**
-     * print method is to print the list
-     */
+
     void print(){
         MyNode temp = head;                      //traversing through the list
         while(temp != null){
