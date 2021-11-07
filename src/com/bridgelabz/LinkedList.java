@@ -18,6 +18,23 @@ public class LinkedList {
         }
     }
 
+    public void append(int data) {
+        MyNode newNode = new MyNode(data);
+        if (head == null){
+            head = newNode;
+            head.next = null;
+        }
+        else {
+            MyNode temp = head;
+            while (temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = newNode;
+            temp = newNode;
+        }
+
+    }
+
     /**
      * MyNode is to create the node with data
      */
