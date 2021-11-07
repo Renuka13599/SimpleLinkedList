@@ -1,7 +1,7 @@
 package com.bridgelabz;
 /*Author:Renu
 *Date:7/11/21
-*purpose:Simple linked list
+*purpose:Using Append method to create a linked list
  */
 
 public class LinkedList {
@@ -35,9 +35,7 @@ public class LinkedList {
 
     }
 
-    /**
-     * MyNode is to create the node with data
-     */
+ 
     class MyNode{
         int data;                            //declaring variables
         MyNode next;
@@ -51,11 +49,9 @@ public class LinkedList {
         }
     }
 
-    /**
-     * print method is to print the list
-     */
+
     void print(){
-        MyNode temp = head;                      //traversing through the list
+        MyNode temp = head;                      
         while(temp != null){
             System.out.print(temp.data + " --> ");
             temp = temp.next;
