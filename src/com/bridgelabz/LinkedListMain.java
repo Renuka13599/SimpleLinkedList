@@ -6,8 +6,7 @@ public class LinkedListMain {
         list.append(56);
         list.append(30);
         list.append(70);
-        list.deleteFirstNode();
-
+        list.popLast();
         list.print();
 
    }
