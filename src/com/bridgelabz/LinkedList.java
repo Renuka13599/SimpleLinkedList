@@ -1,7 +1,7 @@
 package com.bridgelabz;
 /*Author:Renu
 *Date:7/11/21
-*purpose:Delete an element last to first in Linkedlist
+*purpose:Search an element of
  */
 
 public class LinkedList {
@@ -67,6 +67,18 @@ public class LinkedList {
         }
         temp.next = null;
     }
+
+    public int search(int data){
+        MyNode temp = head;
+        int index = 0;                      //initialising the index
+        while(temp != null){                   //traverse through the list
+            if (temp.data == data) {
+                return index;
+            }
+            index++;
+            temp = temp.next;
+        }
+        return index;
     }
 
     class MyNode{
@@ -80,7 +92,6 @@ public class LinkedList {
 
 
     void print(){
-        MyNode head;
         MyNode temp = head;                      //traversing through the list
         while(temp != null){
             System.out.print(temp.data + " --> ");
