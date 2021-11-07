@@ -1,7 +1,7 @@
 package com.bridgelabz;
 /*Author:Renu
 *Date:7/11/21
-*purpose:Simple linked list
+*purpose:To create a linked list in sort  last to first element
  */
 
 public class LinkedList {
@@ -18,9 +18,6 @@ public class LinkedList {
         }
     }
 
-    /**
-     * MyNode is to create the node with data
-     */
     class MyNode{
         int data;                            //declaring variables
         MyNode next;
@@ -34,9 +31,6 @@ public class LinkedList {
         }
     }
 
-    /**
-     * print method is to print the list
-     */
     void print(){
         MyNode temp = head;                      //traversing through the list
         while(temp != null){
